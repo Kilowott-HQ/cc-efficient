@@ -77,22 +77,6 @@ If the user wants to write a new agent, enforce these rules:
 4. Reference checklist files (`~/.claude/reviews/*.md`) instead of embedding the checklist — easier to maintain
 5. Default to Sonnet. Only use Opus if the agent does multi-file synthesis or coordination
 
-## When the user asks for a self-audit
-
-Recommend they run:
-
-```bash
-npx cchubber --no-telemetry
-```
-
-Report headline numbers from the resulting HTML:
-- Grade (A or B = healthy)
-- Cache ratio (200:1+ healthy, <100:1 = inflection event somewhere)
-- Model split (Opus >90% = main thread isn't tiering)
-- Per-day cost trend (sharp spike day = something changed that day)
-
-Suggest the top 3 actions from the report's recommendations.
-
 ## .claudeignore template
 
 Suggest adding this to any project root that doesn't have one. **Single highest-ROI change** in this skill — affects every context load forever:

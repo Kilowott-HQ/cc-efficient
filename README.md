@@ -11,7 +11,6 @@ When activated, Claude Code:
 - **Delegates pure search/lookup** to Haiku-tier subagents instead of the main thread
 - **Flags cache and session hygiene issues** — long sessions, mid-session `CLAUDE.md` edits, missing `.claudeignore`, pasted logs that should be files
 - **Enforces custom-agent design rules** when you build new agents (single responsibility, pinned `model:`, restricted tools)
-- **Recommends self-audit cadence** via `cchubber`
 
 The skill is content-only — no opinions about *what* you build, just *how the model resources are spent* building it.
 
@@ -68,11 +67,10 @@ Fork the repo, edit `skills/efficient/SKILL.md`, push. Areas worth team-specific
 
 ## Companion file: CLAUDE-USAGE.md
 
-The skill is what *Claude* follows. The team also has a human-readable playbook at `CLAUDE-USAGE.md` (in the parent directory of this repo) — that's what people read to understand *why* the skill works the way it does. Keep both in sync when one changes.
+The skill is what *Claude* follows. The repo also includes a human-readable team playbook at [`CLAUDE-USAGE.md`](./CLAUDE-USAGE.md) — that's what people read to understand *why* the skill works the way it does. Keep both in sync when one changes.
 
 ## Related tools
 
-- **[cchubber](https://github.com/azkhh/cchubber)** — local Claude Code usage diagnostics. Run weekly to see cache ratio, model split, inflection points. The skill recommends this for self-audits.
 - **[caveman](https://github.com/JuliusBrussee/caveman)** — token-compressed output mode. Pairs well: `caveman` cuts output tokens, `cc-efficient` cuts input + cache + model-tier waste.
 
 ## Author

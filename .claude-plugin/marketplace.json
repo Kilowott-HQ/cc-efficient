@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cc-efficient",
+  "description": "Team workflow plugin for Claude Code. Tiered-model routing, cache hygiene, and self-audit prompts to make Pro/Max plans last longer without losing quality.",
+  "owner": {
+    "name": "AJ - Kilowott",
+    "url": "https://github.com/ajajrajguruKW"
+  },
+  "plugins": [
+    {
+      "name": "cc-efficient",
+      "description": "Routes work to the cheapest model that fits, enforces cache + session hygiene, adds /efficient.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
